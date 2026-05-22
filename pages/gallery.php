@@ -89,19 +89,19 @@ include 'includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
-    <!-- 🌌 Lightbox Modal Container -->
-    <div id="gallery-lightbox" class="lightbox-modal" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <div class="lightbox-content-wrapper" onclick="event.stopPropagation()">
-            <img id="lightbox-img" class="lightbox-image" src="" alt="Full Resolution Certificate">
-            <div class="lightbox-caption">
-                <h3 id="lightbox-title">Certificate Title</h3>
-                <p id="lightbox-meta">Certificate Date</p>
-            </div>
+<!-- 🌌 Lightbox Modal Container -->
+<div id="gallery-lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-content-wrapper" onclick="event.stopPropagation()">
+        <img id="lightbox-img" class="lightbox-image" src="" alt="Full Resolution Certificate">
+        <div class="lightbox-caption">
+            <h3 id="lightbox-title">Certificate Title</h3>
+            <p id="lightbox-meta">Certificate Date</p>
         </div>
     </div>
-</main>
+</div>
 
 <script>
 function openLightbox(src, title, date) {

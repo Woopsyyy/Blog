@@ -1961,7 +1961,7 @@ footer p {
 
 .lightbox-image {
     max-width: 100%;
-    max-height: 65vh;
+    max-height: 80vh;
     display: block;
     object-fit: contain;
     background: #000;
