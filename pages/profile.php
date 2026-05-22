@@ -11,13 +11,13 @@ include 'includes/header.php';
                 <div class="profile-card">
                     <div class="profile-picture-large">
                         <img src="uploads/profile.jpg.jpg"
-                             alt="Irish Cueva"
-                             class="profile-photo"
-                             onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='inline-flex';">
+                            alt="Irish Cueva"
+                            class="profile-photo"
+                            onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='inline-flex';">
                         <div class="avatar-initials avatar-initials-xxl" id="profile-fallback" style="display:none;">IC</div>
                     </div>
                     <h2 class="profile-name">Irish Cueva</h2>
-                    <p class="profile-title">IT Student & Web Developer</p>
+                    <p class="profile-title">Student</p>
                     <div class="profile-info">
                         <p>📍 Talisay City, Cebu</p>
                         <p>🎓 Talisay City College</p>
@@ -30,7 +30,7 @@ include 'includes/header.php';
             <div class="profile-right">
                 <div class="credentials-section">
                     <h3>🏆 Academic Achievements</h3>
-                    
+
                     <div class="achievement-category">
                         <h4>Secondary Education</h4>
                         <div class="achievement-list">

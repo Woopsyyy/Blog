@@ -23,7 +23,7 @@ include 'includes/header.php';
             <div class="hero-text">
                 <h2>Welcome to My Blog</h2>
                 <p>Sharing my journey as an IT student and aspiring web developer</p>
-                <a href="index.php?page=about" class="hero-btn">Learn More About Me →</a>
+                <a href="index.php?page=about" class="hero-btn">Daily Life And Learning Experiences →</a>
             </div>
             <div class="hero-avatar">
                 <div class="avatar-initials avatar-initials-md" title="Irish Cueva">IC</div>
@@ -51,7 +51,7 @@ include 'includes/header.php';
                 <a href="index.php?page=login#create-post-form" class="add-post-btn">➕ Add New Post</a>
             <?php endif; ?>
         </div>
-        
+
         <?php if (count($posts) > 0): ?>
             <?php foreach ($posts as $post): ?>
                 <div class="post-card">

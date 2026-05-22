@@ -7,6 +7,7 @@ $current_page = isset($page) ? $page : (isset($_GET['page']) ? trim($_GET['page'
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@ $current_page = isset($page) ? $page : (isset($_GET['page']) ? trim($_GET['page'
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -26,10 +28,9 @@ $current_page = isset($page) ? $page : (isset($_GET['page']) ? trim($_GET['page'
                 <a href="index.php?page=about" class="<?php echo $current_page === 'about' ? 'active' : ''; ?>">About</a>
                 <a href="index.php?page=achievements" class="<?php echo $current_page === 'achievements' ? 'active' : ''; ?>">Achievements</a>
                 <a href="index.php?page=profile" class="<?php echo $current_page === 'profile' ? 'active' : ''; ?>">Profile</a>
-                <a href="index.php?page=portfolio" class="<?php echo $current_page === 'portfolio' ? 'active' : ''; ?>">Portfolio</a>
                 <a href="index.php?page=gallery" class="<?php echo $current_page === 'gallery' ? 'active' : ''; ?>">Gallery</a>
                 <a href="index.php?page=contact" class="<?php echo $current_page === 'contact' ? 'active' : ''; ?>">Contact</a>
-                
+
                 <?php if (is_logged_in()): ?>
                     <a href="index.php?page=login" class="<?php echo $current_page === 'login' ? 'active' : ''; ?>">Dashboard</a>
                     <a href="index.php?page=logout" onclick="return confirmLogout()">Logout</a>

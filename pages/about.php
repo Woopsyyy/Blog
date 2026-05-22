@@ -13,11 +13,11 @@ include 'includes/header.php';
         <div class="about-content">
             <div class="about-image">
                 <div class="profile-picture">
-                    <img src="uploads/profile.jpg.jpg" 
-                         alt="Irish Cueva" 
-                         class="profile-photo"
-                         style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.1);"
-                         onerror="this.style.display='none'; document.getElementById('about-fallback').style.display='inline-flex';">
+                    <img src="uploads/profile.jpg.jpg"
+                        alt="Irish Cueva"
+                        class="profile-photo"
+                        style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.1);"
+                        onerror="this.style.display='none'; document.getElementById('about-fallback').style.display='inline-flex';">
                     <div class="avatar-initials avatar-initials-xl" id="about-fallback" style="display:none;" title="Irish Cueva">IC</div>
                     <p class="img-note">Irish Cueva</p>
                 </div>
@@ -25,7 +25,7 @@ include 'includes/header.php';
             <div class="about-text">
                 <h3>Hi, I'm Irish Cueva!</h3>
                 <p>I'm a passionate web developer and IT student based in Talisay City, Cebu. I love creating beautiful and functional websites that solve real-world problems.</p>
-                
+
                 <h3>Personal Details</h3>
                 <div class="personal-details">
                     <div class="detail-row">
@@ -55,7 +55,7 @@ include 'includes/header.php';
                 </div>
 
                 <h3>Educational Attainment</h3>
-                
+
                 <div class="education-item">
                     <div class="education-level">🎓 TERTIARY</div>
                     <div class="education-details">
@@ -85,14 +85,6 @@ include 'includes/header.php';
                     </div>
                 </div>
 
-                <h3>Skills</h3>
-                <ul class="skills-list">
-                    <li>📝 HTML & CSS</li>
-                    <li>⚡ JavaScript</li>
-                    <li>🐘 PHP & MySQL</li>
-                    <li>🎨 UI/UX Design</li>
-                    <li>📱 Responsive Design</li>
-                </ul>
             </div>
         </div>
     </section>

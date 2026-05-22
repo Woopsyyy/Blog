@@ -8,11 +8,11 @@ $has_avatar = file_exists($avatar_img);
 ?>
 
 <main class="container">
-    <section class="instagram-gallery-section">
-        <!-- 📸 Instagram Profile Header -->
-        <div class="insta-profile-header">
-            <div class="insta-avatar-container">
-                <div class="insta-avatar">
+    <section class="custom-gallery-section">
+        <!-- 📸 Gallery Profile Header -->
+        <div class="gal-profile-header">
+            <div class="gal-avatar-container">
+                <div class="gal-avatar">
                     <?php if ($has_avatar): ?>
                         <img src="<?php echo $avatar_img; ?>" alt="Irish Cueva Profile Picture">
                     <?php else: ?>
@@ -21,36 +21,36 @@ $has_avatar = file_exists($avatar_img);
                 </div>
             </div>
             
-            <div class="insta-profile-details">
-                <div class="insta-username-row">
-                    <h2 class="insta-username">irish_cueva <span class="verified-badge" title="Verified Professional">✔</span></h2>
-                    <a href="index.php?page=contact" class="insta-btn-message">Message</a>
-                    <a href="index.php?page=portfolio" class="insta-btn-portfolio">Portfolio</a>
+            <div class="gal-profile-details">
+                <div class="gal-username-row">
+                    <h2 class="gal-username">irish_cueva <span class="verified-badge" title="Verified Professional">✔</span></h2>
+                    <a href="index.php?page=contact" class="gal-btn-message">Message</a>
+                    <a href="index.php?page=portfolio" class="gal-btn-portfolio">Portfolio</a>
                 </div>
                 
-                <div class="insta-stats-row">
+                <div class="gal-stats-row">
                     <span><strong>7</strong> posts</span>
                     <span><strong>10+</strong> skills verified</span>
                     <span><strong>100%</strong> CSS NC II success</span>
                 </div>
                 
-                <div class="insta-bio">
-                    <h1 class="insta-full-name">Irish Cueva</h1>
-                    <p class="insta-category">Computer Systems Servicing NC II & IoT Automation</p>
-                    <p class="insta-bio-text">
+                <div class="gal-bio">
+                    <h1 class="gal-full-name">Irish Cueva</h1>
+                    <p class="gal-category">Computer Systems Servicing NC II & IoT Automation</p>
+                    <p class="gal-bio-text">
                         ⚡ Professional certification & achievements showcase<br>
                         🎓 Specializing in computer networking, systems diagnostics, and hardware integration<br>
                         💡 Merging IoT connectivity with modern server architectures
                     </p>
-                    <a href="index.php?page=about" class="insta-bio-link">🔗 Learn more in my Bio</a>
+                    <a href="index.php?page=about" class="gal-bio-link">🔗 Learn more in my Bio</a>
                 </div>
             </div>
         </div>
 
-        <!-- 📑 Instagram Tab Menu (Interactive!) -->
-        <div class="insta-tabs">
-            <div id="tab-certifications" class="insta-tab active" onclick="switchTab('certifications')" title="Show Professional Certifications">
-                <svg class="insta-tab-icon" viewBox="0 0 24 24" width="12" height="12">
+        <!-- 📑 Gallery Tab Menu (Interactive!) -->
+        <div class="gal-tabs">
+            <div id="tab-certifications" class="gal-tab active" onclick="switchTab('certifications')" title="Show Professional Certifications">
+                <svg class="gal-tab-icon" viewBox="0 0 24 24" width="12" height="12">
                     <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
                     <line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" stroke-width="2"/>
                     <line x1="15" y1="3" x2="15" y2="21" stroke="currentColor" stroke-width="2"/>
@@ -59,8 +59,8 @@ $has_avatar = file_exists($avatar_img);
                 </svg>
                 <span>CERTIFICATIONS</span>
             </div>
-            <div id="tab-personal" class="insta-tab" onclick="switchTab('personal')" title="Show Personal Life Gallery">
-                <svg class="insta-tab-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+            <div id="tab-personal" class="gal-tab" onclick="switchTab('personal')" title="Show Personal Life Gallery">
+                <svg class="gal-tab-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="10" />
                     <circle cx="12" cy="10" r="3" />
                     <path d="M6 19c1.5-3 4.5-5 6-5s4.5 2 6 5" />
@@ -70,104 +70,104 @@ $has_avatar = file_exists($avatar_img);
         </div>
 
         <!-- 🖼️ Tab 1 Content: Certifications Grid -->
-        <div id="grid-certifications" class="insta-grid grid-tab-content">
+        <div id="grid-certifications" class="gal-grid grid-tab-content">
             <!-- Post 1: NC CSS -->
-            <div class="insta-post" onclick="openLightbox(0)" style="--delay: 1;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/aef5da33-02a4-430a-b6ee-3c7b884ba644.jpg" alt="National Certificate in Computer Systems Servicing" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(0)" style="--delay: 1;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/aef5da33-02a4-430a-b6ee-3c7b884ba644.jpg" alt="National Certificate in Computer Systems Servicing" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Verified</span></span>
                             <span class="stat-item"><span class="icon">🎓</span> <span>NC II</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">Computer Systems Servicing</h4>
+                        <h4 class="gal-post-hover-title">Computer Systems Servicing</h4>
                     </div>
                 </div>
             </div>
 
             <!-- Post 2: IoT Smart Automation -->
-            <div class="insta-post" onclick="openLightbox(1)" style="--delay: 2;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/88eb5415-5f17-492e-9b76-6f7b2835f2d2.jpg" alt="IoT Integration and Smart Automation Workshop" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(1)" style="--delay: 2;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/88eb5415-5f17-492e-9b76-6f7b2835f2d2.jpg" alt="IoT Integration and Smart Automation Workshop" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Verified</span></span>
                             <span class="stat-item"><span class="icon">💡</span> <span>IoT</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">IoT Smart Automation</h4>
+                        <h4 class="gal-post-hover-title">IoT Smart Automation</h4>
                     </div>
                 </div>
             </div>
 
             <!-- Post 3: Load Balancing -->
-            <div class="insta-post" onclick="openLightbox(2)" style="--delay: 3;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/86e4ab65-80a0-43c9-b7b6-014f11cf0085.jpg" alt="Mastering Load Balancing" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(2)" style="--delay: 3;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/86e4ab65-80a0-43c9-b7b6-014f11cf0085.jpg" alt="Mastering Load Balancing" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Verified</span></span>
                             <span class="stat-item"><span class="icon">🌐</span> <span>Scaling</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">Load Balancing Strategies</h4>
+                        <h4 class="gal-post-hover-title">Load Balancing Strategies</h4>
                     </div>
                 </div>
             </div>
 
             <!-- Post 4: Computer Servicing NC II -->
-            <div class="insta-post" onclick="openLightbox(3)" style="--delay: 4;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/7c8c5cb1-d8c3-4a3f-aa08-7f5304e2911a.jpg" alt="Computer Servicing System NC II" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(3)" style="--delay: 4;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/7c8c5cb1-d8c3-4a3f-aa08-7f5304e2911a.jpg" alt="Computer Servicing System NC II" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Verified</span></span>
                             <span class="stat-item"><span class="icon">🔧</span> <span>Hardware</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">Computer Servicing NC II</h4>
+                        <h4 class="gal-post-hover-title">Computer Servicing NC II</h4>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- 🖼️ Tab 2 Content: Personal Life Grid (Dynamic, Starts Hidden) -->
-        <div id="grid-personal" class="insta-grid grid-tab-content" style="display: none;">
+        <div id="grid-personal" class="gal-grid grid-tab-content" style="display: none;">
             <!-- Post 1: Hacking / Study session -->
-            <div class="insta-post" onclick="openLightbox(0)" style="--delay: 1;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/5afd88de-95ba-449d-b6f2-994b309662f7.jpg" alt="Dedicated Coding Session" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(0)" style="--delay: 1;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/5afd88de-95ba-449d-b6f2-994b309662f7.jpg" alt="Dedicated Coding Session" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Focus</span></span>
                             <span class="stat-item"><span class="icon">💻</span> <span>DevLife</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">Late Night Hacking</h4>
+                        <h4 class="gal-post-hover-title">Late Night Hacking</h4>
                     </div>
                 </div>
             </div>
 
             <!-- Post 2: Collaboration / IT Peers -->
-            <div class="insta-post" onclick="openLightbox(1)" style="--delay: 2;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/cac163b5-009b-4235-b303-fe069e6e2446.jpg" alt="Tech Collaboration" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(1)" style="--delay: 2;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/cac163b5-009b-4235-b303-fe069e6e2446.jpg" alt="Tech Collaboration" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Sharing</span></span>
                             <span class="stat-item"><span class="icon">👥</span> <span>Meetup</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">System Architecture Panel</h4>
+                        <h4 class="gal-post-hover-title">System Architecture Panel</h4>
                     </div>
                 </div>
             </div>
 
             <!-- Post 3: Study Workspace Balance -->
-            <div class="insta-post" onclick="openLightbox(2)" style="--delay: 3;">
-                <div class="insta-post-wrapper">
-                    <img src="assets/img/51e779da-6f74-488d-bc7e-5a7e0cbcef60.jpg" alt="Academic Workspace Balance" class="insta-post-img">
-                    <div class="insta-post-overlay">
-                        <div class="insta-overlay-stats">
+            <div class="gal-post" onclick="openLightbox(2)" style="--delay: 3;">
+                <div class="gal-post-wrapper">
+                    <img src="assets/img/51e779da-6f74-488d-bc7e-5a7e0cbcef60.jpg" alt="Academic Workspace Balance" class="gal-post-img">
+                    <div class="gal-post-overlay">
+                        <div class="gal-overlay-stats">
                             <span class="stat-item"><span class="icon">❤️</span> <span>Balance</span></span>
                             <span class="stat-item"><span class="icon">🎓</span> <span>Campus</span></span>
                         </div>
-                        <h4 class="insta-post-hover-title">Campus Workspaces</h4>
+                        <h4 class="gal-post-hover-title">Campus Workspaces</h4>
                     </div>
                 </div>
             </div>
@@ -175,40 +175,40 @@ $has_avatar = file_exists($avatar_img);
     </section>
 </main>
 
-<!-- 🌌 Lightbox Modal Container (Instagram Split Style) -->
+<!-- 🌌 Lightbox Modal Container (Gallery Split Style) -->
 <div id="gallery-lightbox" class="lightbox-modal" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
     <div class="lightbox-content-wrapper" onclick="event.stopPropagation()">
-        <div class="insta-lightbox-body">
-            <div class="insta-lightbox-media">
+        <div class="gal-lightbox-body">
+            <div class="gal-lightbox-media">
                 <!-- Navigation Arrows inside Lightbox -->
                 <button class="lightbox-nav nav-prev" onclick="prevPost(event)" title="Previous (Left ArrowKey)">❮</button>
                 <img id="lightbox-img" class="lightbox-image" src="" alt="Full Resolution Certificate">
                 <button class="lightbox-nav nav-next" onclick="nextPost(event)" title="Next (Right ArrowKey)">❯</button>
             </div>
             
-            <div class="insta-lightbox-sidebar">
-                <div class="insta-sidebar-header">
-                    <div class="insta-sidebar-avatar">
+            <div class="gal-lightbox-sidebar">
+                <div class="gal-sidebar-header">
+                    <div class="gal-sidebar-avatar">
                         <?php if ($has_avatar): ?>
                             <img src="<?php echo $avatar_img; ?>" alt="IC">
                         <?php else: ?>
                             IC
                         <?php endif; ?>
                     </div>
-                    <div class="insta-sidebar-userinfo">
+                    <div class="gal-sidebar-userinfo">
                         <strong>irish_cueva <span class="verified-badge">✔</span></strong>
                         <span id="lightbox-location">Cebu, Philippines</span>
                     </div>
                 </div>
                 
-                <div class="insta-sidebar-caption-area">
-                    <div class="insta-sidebar-caption">
+                <div class="gal-sidebar-caption-area">
+                    <div class="gal-sidebar-caption">
                         <strong class="caption-user">irish_cueva</strong> 
                         <span id="lightbox-description">Certificate details...</span>
                     </div>
                     
-                    <div class="insta-sidebar-system-note" id="lightbox-system-badge">
+                    <div class="gal-sidebar-system-note" id="lightbox-system-badge">
                         <span class="note-icon">🛡️</span>
                         <div>
                             <strong>Credentials Verified</strong>
@@ -217,26 +217,27 @@ $has_avatar = file_exists($avatar_img);
                     </div>
                 </div>
                 
-                <div class="insta-sidebar-footer">
-                    <div class="insta-action-icons">
+                <div class="gal-sidebar-footer">
+                    <div class="gal-action-icons">
                         <div class="left-actions">
                             <span id="lightbox-like-btn" class="action-icon" onclick="toggleLike(event)">❤️</span>
                             <span class="action-icon" onclick="sharePost(event)">✈️</span>
                         </div>
                         <span id="lightbox-bookmark-btn" class="action-icon bookmark" onclick="toggleBookmark(event)">🔖</span>
                     </div>
-                    <div class="insta-likes-count" id="lightbox-likes-count">
+                    <div class="gal-likes-count" id="lightbox-likes-count">
                         Verified by <strong>TESDA</strong> and <strong>recruitment boards</strong>
                     </div>
-                    <div class="insta-sidebar-caption-title">
+                    <div class="gal-sidebar-caption-title">
                         <h3 id="lightbox-title">Certificate Title</h3>
-                        <p id="lightbox-meta" class="insta-caption-date">Certificate Date</p>
+                        <p id="lightbox-meta" class="gal-caption-date">Certificate Date</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- 🍞 Custom Interactive Toast Notification -->
 <div id="gallery-toast" class="gallery-toast">

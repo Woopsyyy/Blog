@@ -12,7 +12,6 @@ $allowed_pages = [
     'about'        => 'pages/about.php',
     'achievements' => 'pages/achievements.php',
     'profile'      => 'pages/profile.php',
-    'portfolio'    => 'pages/portfolio.php',
     'gallery'      => 'pages/gallery.php',
     'contact'      => 'pages/contact.php',
     'post'         => 'pages/post.php',
@@ -26,4 +25,3 @@ if (array_key_exists($page, $allowed_pages)) {
     // 404 fallback: display home
     include 'pages/home.php';
 }
-?>

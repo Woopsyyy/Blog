@@ -1755,7 +1755,7 @@ footer p {
    🖼️ INSTAGRAM-STYLE CERTIFICATE FEED & PROFESSIONAL LIGHTBOX
    ========================================================================== */
 
-.instagram-gallery-section {
+.custom-gallery-section {
     max-width: 935px;
     margin: 40px auto;
     padding: 0 20px;
@@ -1763,7 +1763,7 @@ footer p {
 }
 
 /* 📸 Profile Header Layout */
-.insta-profile-header {
+.gal-profile-header {
     display: flex;
     gap: 70px;
     margin-bottom: 44px;
@@ -1772,18 +1772,18 @@ footer p {
     align-items: flex-start;
 }
 
-.insta-avatar-container {
+.gal-avatar-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.insta-avatar {
+.gal-avatar {
     width: 155px;
     height: 155px;
     border-radius: 50%;
-    /* Premium Instagram Gradient Border Ring */
+    /* Premium Gallery Gradient Border Ring */
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     padding: 4px;
     display: flex;
@@ -1794,11 +1794,11 @@ footer p {
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.insta-avatar:hover {
+.gal-avatar:hover {
     transform: scale(1.05);
 }
 
-.insta-avatar span {
+.gal-avatar span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1813,21 +1813,21 @@ footer p {
     border: 4px solid white;
 }
 
-.insta-profile-details {
+.gal-profile-details {
     flex: 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.insta-username-row {
+.gal-username-row {
     display: flex;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.insta-username {
+.gal-username {
     font-family: var(--font-display);
     font-size: 1.8rem;
     font-weight: 300;
@@ -1853,11 +1853,11 @@ footer p {
     transition: transform 0.6s ease;
 }
 
-.insta-username:hover .verified-badge {
+.gal-username:hover .verified-badge {
     transform: rotate(360deg);
 }
 
-.insta-btn-message, .insta-btn-portfolio {
+.gal-btn-message, .gal-btn-portfolio {
     display: inline-block;
     padding: 7px 18px;
     font-size: 0.88rem;
@@ -1868,47 +1868,47 @@ footer p {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.insta-btn-message {
+.gal-btn-message {
     background: #4f46e5;
     color: white;
     border-color: transparent;
     box-shadow: 0 4px 12px var(--color-primary-glow);
 }
 
-.insta-btn-message:hover {
+.gal-btn-message:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px var(--color-primary-glow);
     background: #4338ca;
 }
 
-.insta-btn-portfolio {
+.gal-btn-portfolio {
     background: var(--glass-bg);
     color: var(--color-dark);
 }
 
-.insta-btn-portfolio:hover {
+.gal-btn-portfolio:hover {
     background: #f1f5f9;
     border-color: #cbd5e1;
     transform: translateY(-2px);
 }
 
-.insta-stats-row {
+.gal-stats-row {
     display: flex;
     gap: 40px;
     font-size: 1rem;
     color: var(--color-dark);
 }
 
-.insta-stats-row span strong {
+.gal-stats-row span strong {
     font-weight: 800;
 }
 
-.insta-bio {
+.gal-bio {
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-.insta-full-name {
+.gal-full-name {
     font-family: var(--font-display);
     font-weight: 800;
     font-size: 1.1rem;
@@ -1916,20 +1916,20 @@ footer p {
     margin-bottom: 2px;
 }
 
-.insta-category {
+.gal-category {
     color: var(--color-dark-muted);
     font-weight: 600;
     font-size: 0.88rem;
     margin-bottom: 10px;
 }
 
-.insta-bio-text {
+.gal-bio-text {
     color: #475569;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.insta-bio-link {
+.gal-bio-link {
     color: #1e40af;
     text-decoration: none;
     font-weight: 700;
@@ -1937,12 +1937,12 @@ footer p {
     transition: opacity 0.3s;
 }
 
-.insta-bio-link:hover {
+.gal-bio-link:hover {
     opacity: 0.8;
 }
 
-/* 📑 Instagram Tab Layout */
-.insta-tabs {
+/* 📑 Gallery Tab Layout */
+.gal-tabs {
     display: flex;
     justify-content: center;
     border-top: 1.5px solid rgba(226, 232, 240, 0.8);
@@ -1950,7 +1950,7 @@ footer p {
     margin-bottom: 28px;
 }
 
-.insta-tab {
+.gal-tab {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -1964,7 +1964,7 @@ footer p {
     transition: color 0.3s;
 }
 
-.insta-tab::after {
+.gal-tab::after {
     content: '';
     position: absolute;
     top: -1.5px;
@@ -1975,25 +1975,25 @@ footer p {
     transition: background-color 0.3s;
 }
 
-.insta-tab.active {
+.gal-tab.active {
     color: var(--color-dark);
 }
 
-.insta-tab.active::after {
+.gal-tab.active::after {
     background: var(--color-dark);
 }
 
-.insta-tab.disabled {
+.gal-tab.disabled {
     opacity: 0.4;
     cursor: not-allowed;
 }
 
-.insta-tab-icon {
+.gal-tab-icon {
     display: inline-block;
 }
 
-/* 🖼️ Instagram Posts 3-Column Square Grid */
-.insta-grid {
+/* 🖼️ Gallery Posts 3-Column Square Grid */
+.gal-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
@@ -2001,7 +2001,7 @@ footer p {
 }
 
 /* Staggered fadeIn animations for Grid items */
-@keyframes instaPostFadeIn {
+@keyframes galPostFadeIn {
     from {
         opacity: 0;
         transform: translateY(20px) scale(0.97);
@@ -2012,15 +2012,15 @@ footer p {
     }
 }
 
-.insta-post {
+.gal-post {
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    animation: instaPostFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: galPostFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
     animation-delay: calc(var(--delay) * 0.1s);
 }
 
-.insta-post-wrapper {
+.gal-post-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -2031,19 +2031,19 @@ footer p {
     background: #0f172a;
 }
 
-.insta-post-img {
+.gal-post-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.insta-post:hover .insta-post-img {
+.gal-post:hover .gal-post-img {
     transform: scale(1.06);
 }
 
 /* Hover Overlay Styles */
-.insta-post-overlay {
+.gal-post-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -2063,11 +2063,11 @@ footer p {
     box-sizing: border-box;
 }
 
-.insta-post:hover .insta-post-overlay {
+.gal-post:hover .gal-post-overlay {
     opacity: 1;
 }
 
-.insta-overlay-stats {
+.gal-overlay-stats {
     display: flex;
     gap: 20px;
     margin-bottom: 12px;
@@ -2075,7 +2075,7 @@ footer p {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.insta-post:hover .insta-overlay-stats {
+.gal-post:hover .gal-overlay-stats {
     transform: translateY(0);
 }
 
@@ -2103,7 +2103,7 @@ footer p {
     to { transform: scale(1.25); }
 }
 
-.insta-post-hover-title {
+.gal-post-hover-title {
     color: rgba(255, 255, 255, 0.9);
     font-family: var(--font-display);
     font-size: 0.88rem;
@@ -2116,7 +2116,7 @@ footer p {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
 }
 
-.insta-post:hover .insta-post-hover-title {
+.gal-post:hover .gal-post-hover-title {
     transform: translateY(0);
     opacity: 1;
 }
@@ -2178,14 +2178,14 @@ footer p {
     transform: scale(1);
 }
 
-/* 📱 Layout of Instagram split popup */
-.insta-lightbox-body {
+/* 📱 Layout of Gallery split popup */
+.gal-lightbox-body {
     display: flex;
     width: 100%;
     background: white;
 }
 
-.insta-lightbox-media {
+.gal-lightbox-media {
     flex: 1.4;
     background: #0f172a;
     display: flex;
@@ -2202,7 +2202,7 @@ footer p {
     object-fit: contain;
 }
 
-.insta-lightbox-sidebar {
+.gal-lightbox-sidebar {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -2212,7 +2212,7 @@ footer p {
 }
 
 /* Header Area inside Sidebar */
-.insta-sidebar-header {
+.gal-sidebar-header {
     display: flex;
     align-items: center;
     gap: 14px;
@@ -2220,7 +2220,7 @@ footer p {
     border-bottom: 1px solid #f1f5f9;
 }
 
-.insta-sidebar-avatar {
+.gal-sidebar-avatar {
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -2236,12 +2236,12 @@ footer p {
     box-shadow: 0 0 0 2px #4f46e5;
 }
 
-.insta-sidebar-userinfo {
+.gal-sidebar-userinfo {
     display: flex;
     flex-direction: column;
 }
 
-.insta-sidebar-userinfo strong {
+.gal-sidebar-userinfo strong {
     font-size: 0.92rem;
     color: var(--color-dark);
     display: flex;
@@ -2249,14 +2249,14 @@ footer p {
     gap: 4px;
 }
 
-.insta-sidebar-userinfo span {
+.gal-sidebar-userinfo span {
     font-size: 0.78rem;
     color: var(--color-dark-muted);
     font-weight: 600;
 }
 
 /* Captions and Scrollable Content Area */
-.insta-sidebar-caption-area {
+.gal-sidebar-caption-area {
     flex: 1;
     padding: 24px;
     overflow-y: auto;
@@ -2266,7 +2266,7 @@ footer p {
     border-bottom: 1px solid #f1f5f9;
 }
 
-.insta-sidebar-caption {
+.gal-sidebar-caption {
     font-size: 0.92rem;
     line-height: 1.6;
     color: #334155;
@@ -2278,7 +2278,7 @@ footer p {
     margin-right: 8px;
 }
 
-.insta-sidebar-system-note {
+.gal-sidebar-system-note {
     display: flex;
     gap: 12px;
     background: #eff6ff;
@@ -2287,11 +2287,11 @@ footer p {
     border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
-.insta-sidebar-system-note .note-icon {
+.gal-sidebar-system-note .note-icon {
     font-size: 1.3rem;
 }
 
-.insta-sidebar-system-note strong {
+.gal-sidebar-system-note strong {
     display: block;
     font-size: 0.88rem;
     color: #1e40af;
@@ -2299,7 +2299,7 @@ footer p {
     margin-bottom: 2px;
 }
 
-.insta-sidebar-system-note span {
+.gal-sidebar-system-note span {
     display: block;
     font-size: 0.8rem;
     color: #2563eb;
@@ -2308,19 +2308,19 @@ footer p {
 }
 
 /* Bottom Sidebar Info and Actions */
-.insta-sidebar-footer {
+.gal-sidebar-footer {
     padding: 20px 24px;
     background: #fafafa;
 }
 
-.insta-action-icons {
+.gal-action-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
 }
 
-.insta-action-icons .left-actions {
+.gal-action-icons .left-actions {
     display: flex;
     gap: 16px;
 }
@@ -2340,23 +2340,23 @@ footer p {
     color: #ef4444;
 }
 
-.insta-likes-count {
+.gal-likes-count {
     font-size: 0.85rem;
     color: var(--color-dark);
     font-weight: 500;
     margin-bottom: 12px;
 }
 
-.insta-likes-count strong {
+.gal-likes-count strong {
     font-weight: 800;
 }
 
-.insta-sidebar-caption-title {
+.gal-sidebar-caption-title {
     border-top: 1px solid #f1f5f9;
     padding-top: 14px;
 }
 
-.insta-sidebar-caption-title h3 {
+.gal-sidebar-caption-title h3 {
     font-family: var(--font-display);
     font-size: 1.05rem;
     font-weight: 800;
@@ -2365,7 +2365,7 @@ footer p {
     line-height: 1.3;
 }
 
-.insta-caption-date {
+.gal-caption-date {
     font-size: 0.72rem;
     color: var(--color-dark-muted);
     font-weight: 700;
@@ -2375,7 +2375,7 @@ footer p {
 
 /* 📱 Responsive Adjustments */
 @media (max-width: 900px) {
-    .insta-profile-header {
+    .gal-profile-header {
         flex-direction: column;
         align-items: center;
         gap: 30px;
@@ -2383,33 +2383,33 @@ footer p {
         padding-bottom: 20px;
     }
     
-    .insta-avatar {
+    .gal-avatar {
         width: 130px;
         height: 130px;
     }
     
-    .insta-avatar span {
+    .gal-avatar span {
         font-size: 2.2rem;
     }
     
-    .insta-profile-details {
+    .gal-profile-details {
         align-items: center;
     }
     
-    .insta-username-row {
+    .gal-username-row {
         justify-content: center;
     }
     
-    .insta-stats-row {
+    .gal-stats-row {
         justify-content: center;
         gap: 24px;
     }
     
-    .insta-lightbox-body {
+    .gal-lightbox-body {
         flex-direction: column;
     }
     
-    .insta-lightbox-media {
+    .gal-lightbox-media {
         max-height: 50vh;
         min-height: auto;
     }
@@ -2418,7 +2418,7 @@ footer p {
         max-height: 50vh;
     }
     
-    .insta-lightbox-sidebar {
+    .gal-lightbox-sidebar {
         border-left: none;
         border-top: 1px solid #e2e8f0;
         max-height: 40vh;
@@ -2426,17 +2426,17 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .insta-grid {
+    .gal-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
     
-    .insta-stats-row {
+    .gal-stats-row {
         font-size: 0.9rem;
         gap: 16px;
     }
     
-    .insta-profile-header {
+    .gal-profile-header {
         margin-bottom: 24px;
     }
 }
@@ -2468,7 +2468,7 @@ footer p {
    ========================================================================== */
 
 /* Profile Header Avatar image fallback styling */
-.insta-avatar img {
+.gal-avatar img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -2477,7 +2477,7 @@ footer p {
 }
 
 /* Lightbox Navigation Buttons styling */
-.insta-lightbox-media {
+.gal-lightbox-media {
     position: relative;
 }
 
