@@ -2462,3 +2462,151 @@ footer p {
 .post-banner-container:hover img {
     transform: scale(1.02);
 }
+
+/* ==========================================================================
+   🖼️ INTERACTIVE INSTAGRAM GALLERY ENHANCEMENTS
+   ========================================================================== */
+
+/* Profile Header Avatar image fallback styling */
+.insta-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+}
+
+/* Lightbox Navigation Buttons styling */
+.insta-lightbox-media {
+    position: relative;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+    user-select: none;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-nav:hover {
+    background: rgba(79, 70, 229, 0.85);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.nav-prev {
+    left: 15px;
+}
+
+.nav-next {
+    right: 15px;
+}
+
+/* Dynamic Interactive Icons styling */
+.action-icon {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    user-select: none;
+}
+
+.action-icon:hover {
+    transform: scale(1.2);
+}
+
+.action-icon:active {
+    transform: scale(0.9);
+}
+
+.action-icon.liked-active {
+    color: #ef4444 !important;
+    animation: pulseHeart 0.4s ease-out;
+}
+
+.action-icon.bookmarked-active {
+    color: #eab308 !important;
+}
+
+@keyframes pulseHeart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+/* Share / Copy Toast Notification */
+.gallery-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 40px);
+    background: #0f172a;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.gallery-toast-icon {
+    font-size: 1.2rem;
+}
+
+.gallery-toast-message {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.gallery-toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4f46e5, #ec4899);
+    width: 100%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transform-origin: left;
+}
+
+.gallery-toast.show .gallery-toast-progress {
+    animation: toastProgressBar 3s linear forwards;
+}
+
+@keyframes toastProgressBar {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}
