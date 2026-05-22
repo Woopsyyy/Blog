@@ -207,3 +207,5 @@ document.addEventListener('keydown', function(event) {
     }
 });
 </script>
+
+<?php include 'includes/footer.php'; ?>
