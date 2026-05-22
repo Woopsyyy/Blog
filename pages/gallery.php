@@ -29,7 +29,7 @@ $has_avatar = file_exists($avatar_img);
                 </div>
                 
                 <div class="insta-stats-row">
-                    <span><strong>4</strong> posts</span>
+                    <span><strong>7</strong> posts</span>
                     <span><strong>10+</strong> skills verified</span>
                     <span><strong>100%</strong> CSS NC II success</span>
                 </div>
@@ -47,9 +47,9 @@ $has_avatar = file_exists($avatar_img);
             </div>
         </div>
 
-        <!-- 📑 Instagram Tab Menu -->
+        <!-- 📑 Instagram Tab Menu (Interactive!) -->
         <div class="insta-tabs">
-            <div class="insta-tab active">
+            <div id="tab-certifications" class="insta-tab active" onclick="switchTab('certifications')" title="Show Professional Certifications">
                 <svg class="insta-tab-icon" viewBox="0 0 24 24" width="12" height="12">
                     <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
                     <line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" stroke-width="2"/>
@@ -59,18 +59,18 @@ $has_avatar = file_exists($avatar_img);
                 </svg>
                 <span>CERTIFICATIONS</span>
             </div>
-            <div class="insta-tab disabled">
-                <svg class="insta-tab-icon" viewBox="0 0 24 24" width="12" height="12">
-                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <path d="M6 19c1.5-3 4.5-5 6-5s4.5 2 6 5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <div id="tab-personal" class="insta-tab" onclick="switchTab('personal')" title="Show Personal Life Gallery">
+                <svg class="insta-tab-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M6 19c1.5-3 4.5-5 6-5s4.5 2 6 5" />
                 </svg>
-                <span>TAGGED</span>
+                <span>PERSONAL LIFE</span>
             </div>
         </div>
 
-        <!-- 🖼️ Instagram Post Grid -->
-        <div class="insta-grid">
+        <!-- 🖼️ Tab 1 Content: Certifications Grid -->
+        <div id="grid-certifications" class="insta-grid grid-tab-content">
             <!-- Post 1: NC CSS -->
             <div class="insta-post" onclick="openLightbox(0)" style="--delay: 1;">
                 <div class="insta-post-wrapper">
@@ -127,6 +127,51 @@ $has_avatar = file_exists($avatar_img);
                 </div>
             </div>
         </div>
+
+        <!-- 🖼️ Tab 2 Content: Personal Life Grid (Dynamic, Starts Hidden) -->
+        <div id="grid-personal" class="insta-grid grid-tab-content" style="display: none;">
+            <!-- Post 1: Hacking / Study session -->
+            <div class="insta-post" onclick="openLightbox(0)" style="--delay: 1;">
+                <div class="insta-post-wrapper">
+                    <img src="assets/img/5afd88de-95ba-449d-b6f2-994b309662f7.jpg" alt="Dedicated Coding Session" class="insta-post-img">
+                    <div class="insta-post-overlay">
+                        <div class="insta-overlay-stats">
+                            <span class="stat-item"><span class="icon">❤️</span> <span>Focus</span></span>
+                            <span class="stat-item"><span class="icon">💻</span> <span>DevLife</span></span>
+                        </div>
+                        <h4 class="insta-post-hover-title">Late Night Hacking</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2: Collaboration / IT Peers -->
+            <div class="insta-post" onclick="openLightbox(1)" style="--delay: 2;">
+                <div class="insta-post-wrapper">
+                    <img src="assets/img/cac163b5-009b-4235-b303-fe069e6e2446.jpg" alt="Tech Collaboration" class="insta-post-img">
+                    <div class="insta-post-overlay">
+                        <div class="insta-overlay-stats">
+                            <span class="stat-item"><span class="icon">❤️</span> <span>Sharing</span></span>
+                            <span class="stat-item"><span class="icon">👥</span> <span>Meetup</span></span>
+                        </div>
+                        <h4 class="insta-post-hover-title">System Architecture Panel</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3: Study Workspace Balance -->
+            <div class="insta-post" onclick="openLightbox(2)" style="--delay: 3;">
+                <div class="insta-post-wrapper">
+                    <img src="assets/img/51e779da-6f74-488d-bc7e-5a7e0cbcef60.jpg" alt="Academic Workspace Balance" class="insta-post-img">
+                    <div class="insta-post-overlay">
+                        <div class="insta-overlay-stats">
+                            <span class="stat-item"><span class="icon">❤️</span> <span>Balance</span></span>
+                            <span class="stat-item"><span class="icon">🎓</span> <span>Campus</span></span>
+                        </div>
+                        <h4 class="insta-post-hover-title">Campus Workspaces</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
@@ -153,7 +198,7 @@ $has_avatar = file_exists($avatar_img);
                     </div>
                     <div class="insta-sidebar-userinfo">
                         <strong>irish_cueva <span class="verified-badge">✔</span></strong>
-                        <span>Cebu, Philippines</span>
+                        <span id="lightbox-location">Cebu, Philippines</span>
                     </div>
                 </div>
                 
@@ -163,7 +208,7 @@ $has_avatar = file_exists($avatar_img);
                         <span id="lightbox-description">Certificate details...</span>
                     </div>
                     
-                    <div class="insta-sidebar-system-note">
+                    <div class="insta-sidebar-system-note" id="lightbox-system-badge">
                         <span class="note-icon">🛡️</span>
                         <div>
                             <strong>Credentials Verified</strong>
@@ -201,61 +246,145 @@ $has_avatar = file_exists($avatar_img);
 </div>
 
 <script>
-// Centralized certificate feed data for dynamic interpolation & carousel navigation
-const galleryPosts = [
+// Tab 1: Certifications Data Array
+const certPosts = [
     {
         src: 'assets/img/aef5da33-02a4-430a-b6ee-3c7b884ba644.jpg',
         title: 'National Certificate in Computer Systems Servicing',
         date: 'September 27, 2024',
         desc: 'Verified qualification in computer hardware diagnostics, advanced OS configurations, server setup, and enterprise-level local area network engineering.',
-        authority: 'TESDA (Technical Education and Skills Development Authority)'
+        authority: 'TESDA (Technical Education and Skills Development Authority)',
+        location: 'Cebu, Philippines',
+        isCertified: true
     },
     {
         src: 'assets/img/88eb5415-5f17-492e-9b76-6f7b2835f2d2.jpg',
         title: 'IoT Integration and Smart Automation Workshop',
         date: 'February 15, 2026',
         desc: 'Hands-on design, development, and programming of smart home hardware interfaces, sensor controls, microcontrollers, and wireless connectivity scripts.',
-        authority: 'Department of Information and Communications Technology (DICT)'
+        authority: 'Department of Information and Communications Technology (DICT)',
+        location: 'Manila, Philippines (Remote)',
+        isCertified: true
     },
     {
         src: 'assets/img/86e4ab65-80a0-43c9-b7b6-014f11cf0085.jpg',
         title: 'Mastering Load Balancing: Strategies for Scalable, Resilient, and High Performance Systems',
         date: 'March 16, 2025',
         desc: 'Mastery in system high-availability architectures, server cluster orchestration, traffic management systems, and backend failover configurations.',
-        authority: 'Network Systems Engineering Council'
+        authority: 'Network Systems Engineering Council',
+        location: 'Cebu City, Philippines',
+        isCertified: true
     },
     {
         src: 'assets/img/7c8c5cb1-d8c3-4a3f-aa08-7f5304e2911a.jpg',
         title: 'Empowering Skills in Computer Servicing System NC II',
         date: 'March 23, 2025',
         desc: 'Intensive practical training program validating computer diagnostics, assembly, network system routing protocols, and general technical hardware administration.',
-        authority: 'Vocational Training Institution of Cebu'
+        authority: 'Vocational Training Institution of Cebu',
+        location: 'Cebu City, Philippines',
+        isCertified: true
     }
 ];
 
+// Tab 2: Personal Life Data Array (Using the newly uploaded images!)
+const personalPosts = [
+    {
+        src: 'assets/img/5afd88de-95ba-449d-b6f2-994b309662f7.jpg',
+        title: 'Late Night Hacking & System Analysis',
+        date: 'April 12, 2026',
+        desc: 'Sinking deep into algorithm scripts and backend database logic. Late hours are when custom queries run fast, tests pass, and ideas translate cleanly into source code.',
+        authority: 'My Study Workspace',
+        location: 'Home Workspace, Cebu',
+        isCertified: false
+    },
+    {
+        src: 'assets/img/cac163b5-009b-4235-b303-fe069e6e2446.jpg',
+        title: 'System Architecture Panel & Collaboration',
+        date: 'May 10, 2026',
+        desc: 'Participating in dynamic roundtables with peer developers. Exchanging thoughts on low-latency network setups, cloud deployments, and high-availability stacks.',
+        authority: 'IT Student Summit',
+        location: 'Tech Hub Center',
+        isCertified: false
+    },
+    {
+        src: 'assets/img/51e779da-6f74-488d-bc7e-5a7e0cbcef60.jpg',
+        title: 'Balancing Academic Life & Workspace Design',
+        date: 'May 20, 2026',
+        desc: 'Crafting responsive user interfaces while managing server loads in school labs. The life of an IT enthusiast is all about learning, building, and repeating.',
+        authority: 'Campus Lab Lounge',
+        location: 'Cebu Institute of Tech',
+        isCertified: false
+    }
+];
+
+let activeTab = 'certifications';
 let currentPostIndex = 0;
+
+// Getter to dynamically load active context array
+function getActivePosts() {
+    return activeTab === 'certifications' ? certPosts : personalPosts;
+}
+
+// Switch between tab containers with premium styling toggle
+function switchTab(tabName) {
+    if (activeTab === tabName) return;
+    
+    activeTab = tabName;
+    
+    // Toggles Tab Menus Active States
+    const tabCert = document.getElementById('tab-certifications');
+    const tabPers = document.getElementById('tab-personal');
+    const gridCert = document.getElementById('grid-certifications');
+    const gridPers = document.getElementById('grid-personal');
+    
+    if (tabName === 'certifications') {
+        tabCert.classList.add('active');
+        tabPers.classList.remove('active');
+        gridCert.style.display = 'grid';
+        gridPers.style.display = 'none';
+    } else {
+        tabCert.classList.remove('active');
+        tabPers.classList.add('active');
+        gridCert.style.display = 'none';
+        gridPers.style.display = 'grid';
+    }
+    
+    // Close lightbox if tab changes
+    closeLightbox();
+}
 
 function openLightbox(index) {
     currentPostIndex = index;
-    const post = galleryPosts[index];
+    const posts = getActivePosts();
+    const post = posts[index];
     
     const lightbox = document.getElementById('gallery-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
     const lightboxMeta = document.getElementById('lightbox-meta');
     const lightboxDesc = document.getElementById('lightbox-description');
+    const lightboxLoc = document.getElementById('lightbox-location');
+    const systemBadge = document.getElementById('lightbox-system-badge');
 
-    // Populate data
+    // Populate standard data
     lightboxImg.src = post.src;
     lightboxTitle.textContent = post.title;
     lightboxMeta.textContent = post.date;
     lightboxDesc.textContent = post.desc;
+    lightboxLoc.textContent = post.location;
     
-    // Sync interactive states
+    // Display dynamic credential verification seal only for Certifications tab
+    if (post.isCertified) {
+        systemBadge.style.display = 'flex';
+    } else {
+        systemBadge.style.display = 'none';
+    }
+    
+    // Sync interactive liked/bookmarked states
     updateInteractiveUI();
 
     lightbox.classList.add('show');
-    document.body.style.overflow = 'hidden'; // Disable scroll under popup
+    document.body.style.overflow = 'hidden'; // Disable scroll under modal
 }
 
 function closeLightbox() {
@@ -264,45 +393,61 @@ function closeLightbox() {
     document.body.style.overflow = 'auto'; // Re-enable scroll
 }
 
-// Carousel controls
+// Slideshow controls
 function prevPost(event) {
     if (event) event.stopPropagation();
+    const posts = getActivePosts();
     let newIndex = currentPostIndex - 1;
     if (newIndex < 0) {
-        newIndex = galleryPosts.length - 1;
+        newIndex = posts.length - 1;
     }
     openLightbox(newIndex);
 }
 
 function nextPost(event) {
     if (event) event.stopPropagation();
+    const posts = getActivePosts();
     let newIndex = currentPostIndex + 1;
-    if (newIndex >= galleryPosts.length) {
+    if (newIndex >= posts.length) {
         newIndex = 0;
     }
     openLightbox(newIndex);
 }
 
-// Interactive states logic backed by localStorage
+// Local Storage backed isolated persistence
 function updateInteractiveUI() {
     const likeBtn = document.getElementById('lightbox-like-btn');
     const bookmarkBtn = document.getElementById('lightbox-bookmark-btn');
     const likesCount = document.getElementById('lightbox-likes-count');
-    const post = galleryPosts[currentPostIndex];
+    
+    const posts = getActivePosts();
+    const post = posts[currentPostIndex];
 
-    const isLiked = localStorage.getItem(`cert_like_${currentPostIndex}`) === 'true';
-    const isBookmarked = localStorage.getItem(`cert_bookmark_${currentPostIndex}`) === 'true';
+    // Build isolated storage keys for certifications vs personal life
+    const likeKey = `${activeTab}_like_${currentPostIndex}`;
+    const bookmarkKey = `${activeTab}_bookmark_${currentPostIndex}`;
 
-    // Like UI
+    const isLiked = localStorage.getItem(likeKey) === 'true';
+    const isBookmarked = localStorage.getItem(bookmarkKey) === 'true';
+
+    // Heart Likes UI sync
     if (isLiked) {
         likeBtn.classList.add('liked-active');
-        likesCount.innerHTML = `Liked by <strong>you</strong> and <strong>recruitment boards</strong> (Verified by <strong>${post.authority}</strong>)`;
+        if (post.isCertified) {
+            likesCount.innerHTML = `Liked by <strong>you</strong> and <strong>recruitment boards</strong> (Verified by <strong>${post.authority}</strong>)`;
+        } else {
+            likesCount.innerHTML = `Liked by <strong>you</strong> and <strong>${post.authority}</strong> fans`;
+        }
     } else {
         likeBtn.classList.remove('liked-active');
-        likesCount.innerHTML = `Verified by <strong>${post.authority}</strong> and <strong>recruitment boards</strong>`;
+        if (post.isCertified) {
+            likesCount.innerHTML = `Verified by <strong>${post.authority}</strong> and <strong>recruitment boards</strong>`;
+        } else {
+            likesCount.innerHTML = `Shared from <strong>${post.authority}</strong>`;
+        }
     }
 
-    // Bookmark UI
+    // Bookmarks UI sync
     if (isBookmarked) {
         bookmarkBtn.classList.add('bookmarked-active');
     } else {
@@ -312,7 +457,7 @@ function updateInteractiveUI() {
 
 function toggleLike(event) {
     if (event) event.stopPropagation();
-    const key = `cert_like_${currentPostIndex}`;
+    const key = `${activeTab}_like_${currentPostIndex}`;
     const wasLiked = localStorage.getItem(key) === 'true';
     localStorage.setItem(key, (!wasLiked).toString());
     
@@ -321,23 +466,21 @@ function toggleLike(event) {
 
 function toggleBookmark(event) {
     if (event) event.stopPropagation();
-    const key = `cert_bookmark_${currentPostIndex}`;
+    const key = `${activeTab}_bookmark_${currentPostIndex}`;
     const wasBookmarked = localStorage.getItem(key) === 'true';
     localStorage.setItem(key, (!wasBookmarked).toString());
     
     updateInteractiveUI();
 }
 
-// Simulated dynamic share functionality
+// Build shareable deep-links referencing current active tab and index
 function sharePost(event) {
     if (event) event.stopPropagation();
     
-    // Build share link referencing this page and index
-    const shareUrl = `${window.location.origin}${window.location.pathname}?page=gallery&item=${currentPostIndex}`;
+    const shareUrl = `${window.location.origin}${window.location.pathname}?page=gallery&tab=${activeTab}&item=${currentPostIndex}`;
     
-    // Write to clipboard
     navigator.clipboard.writeText(shareUrl).then(() => {
-        showToast('🔗 Shareable link copied to clipboard!');
+        showToast('🔗 Shareable post link copied to clipboard!');
     }).catch(err => {
         showToast('❌ Failed to copy link to clipboard');
     });
@@ -349,18 +492,16 @@ function showToast(message) {
     
     messageSpan.textContent = message;
     
-    // Force animation reset
     toast.classList.remove('show');
     void toast.offsetWidth; // Trigger reflow
     toast.classList.add('show');
 
-    // Automatically hide toast after 3 seconds
     setTimeout(() => {
         toast.classList.remove('show');
     }, 3000);
 }
 
-// Accessibility and Keyboard Listeners (Arrow navigation + Escape close)
+// Accessibility Keydown listeners
 document.addEventListener('keydown', function(event) {
     const lightbox = document.getElementById('gallery-lightbox');
     if (!lightbox.classList.contains('show')) return;
@@ -374,17 +515,25 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Support reading direct item links on initial load (Deep-linking feature!)
+// Support Deep-linking on initial pageload (Reads url search params)
 window.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
     const itemParam = urlParams.get('item');
-    if (itemParam !== null) {
-        const index = parseInt(itemParam, 10);
-        if (!isNaN(index) && index >= 0 && index < galleryPosts.length) {
-            // Delay slightly to allow layout and animations to settle
-            setTimeout(() => {
-                openLightbox(index);
-            }, 300);
+    
+    if (tabParam !== null) {
+        if (tabParam === 'certifications' || tabParam === 'personal') {
+            switchTab(tabParam);
+            
+            if (itemParam !== null) {
+                const index = parseInt(itemParam, 10);
+                const posts = getActivePosts();
+                if (!isNaN(index) && index >= 0 && index < posts.length) {
+                    setTimeout(() => {
+                        openLightbox(index);
+                    }, 300);
+                }
+            }
         }
     }
 });
