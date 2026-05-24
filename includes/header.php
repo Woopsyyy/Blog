@@ -25,10 +25,9 @@ $current_page = isset($page) ? $page : (isset($_GET['page']) ? trim($_GET['page'
             <h1><a href="index.php"><?php echo (is_logged_in() && $current_page === 'login') ? 'Dashboard' : 'Irish Cueva'; ?></a></h1>
             <nav>
                 <a href="index.php?page=home" class="<?php echo ($current_page === 'home' || $current_page === 'post') ? 'active' : ''; ?>">Home</a>
-                <a href="index.php?page=about" class="<?php echo $current_page === 'about' ? 'active' : ''; ?>">About</a>
+                <a href="index.php?page=profile" class="<?php echo ($current_page === 'profile' || $current_page === 'about') ? 'active' : ''; ?>">About</a>
                 <a href="index.php?page=achievements" class="<?php echo $current_page === 'achievements' ? 'active' : ''; ?>">Achievements</a>
-                <a href="index.php?page=profile" class="<?php echo $current_page === 'profile' ? 'active' : ''; ?>">Profile</a>
-                <a href="index.php?page=gallery" class="<?php echo $current_page === 'gallery' ? 'active' : ''; ?>">Gallery</a>
+                <a href="index.php?page=portfolio" class="<?php echo ($current_page === 'portfolio' || $current_page === 'gallery') ? 'active' : ''; ?>">Portfolio</a>
                 <a href="index.php?page=contact" class="<?php echo $current_page === 'contact' ? 'active' : ''; ?>">Contact</a>
 
                 <?php if (is_logged_in()): ?>

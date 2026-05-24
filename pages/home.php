@@ -22,7 +22,7 @@ include 'includes/header.php';
         <div class="hero-content">
             <div class="hero-text">
                 <h2>Welcome to My Blog</h2>
-                <p>Sharing my journey as an IT student and aspiring web developer</p>
+                <p>Sharing my journey as an IT student, along with my daily experiences, thoughts, and growth throughout college life.</p>
                 <a href="index.php?page=about" class="hero-btn">Daily Life And Learning Experiences →</a>
             </div>
             <div class="hero-avatar">

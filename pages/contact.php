@@ -77,7 +77,7 @@ include 'includes/header.php';
                     <div class="channel-icon-circle bg-light-blue">📧</div>
                     <div class="channel-text">
                         <span class="channel-title">Direct Email</span>
-                        <a href="mailto:irish.cueva@example.com" class="channel-link">irish.cueva@example.com</a>
+                        <a href="mailto:irishamarocueva@gmail.com" class="channel-link">irishamarocueva@gmail.com</a>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@ include 'includes/header.php';
                     <div class="channel-icon-circle bg-light-green">📱</div>
                     <div class="channel-text">
                         <span class="channel-title">Phone Number</span>
-                        <p class="channel-value">+63 912 345 6789</p>
+                        <p class="channel-value">09555048457</p>
                     </div>
                 </div>
 

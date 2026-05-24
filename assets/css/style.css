@@ -67,12 +67,13 @@ body {
     font-family: var(--font-primary);
     line-height: 1.65;
     color: var(--color-dark);
-    /* Soft layered gradient background for a very high-end aesthetic */
+    /* Premium generated asset backdrop with subtle overlays */
     background: 
-        radial-gradient(at 0% 0%, #f1f5f9 0, transparent 40%),
-        radial-gradient(at 50% 0%, #e0e7ff 0, transparent 50%),
-        radial-gradient(at 100% 0%, #fae8ff 0, transparent 40%),
-        #f8fafc;
+        radial-gradient(at 0% 0%, rgba(241, 245, 249, 0.6) 0, transparent 40%),
+        radial-gradient(at 100% 0%, rgba(250, 232, 243, 0.6) 0, transparent 40%),
+        linear-gradient(rgba(248, 250, 252, 0.88), rgba(248, 250, 252, 0.88)),
+        url('../img/blog_background.png') no-repeat center center;
+    background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
     padding-bottom: 0;
@@ -2625,4 +2626,379 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ==========================================================================
+   👤 REDESIGNED PROFILE / ABOUT PAGE
+   ========================================================================== */
+
+.profile-page-section {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    animation: fadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Hero Card (Top) ── */
+.profile-hero-card {
+    display: flex;
+    gap: 40px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.profile-picture-large {
+    position: relative;
+}
+
+.profile-hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 280px;
+}
+
+/* Intro box */
+.profile-intro-box {
+    background: rgba(248, 250, 252, 0.7);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 24px 28px;
+}
+
+.intro-heading {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+    letter-spacing: -0.4px;
+    background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+    color: #475569;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Section sub/headings */
+.section-heading {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    margin-bottom: 24px;
+    letter-spacing: -0.4px;
+}
+
+.section-subheading {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    margin-bottom: 16px;
+    letter-spacing: -0.2px;
+}
+
+/* Personal Details + Hobbies side by side */
+.profile-details-hobbies-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.profile-details-card {
+    flex: 1;
+    min-width: 240px;
+    background: rgba(248, 250, 252, 0.7);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+}
+
+.profile-hobbies-card {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(248, 250, 252, 0.7);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+}
+
+/* Hobbies Grid */
+.hobbies-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: white;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hobby-item:hover {
+    transform: translateX(6px);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: var(--shadow-sm);
+}
+
+.hobby-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.hobby-label {
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+/* ── Bottom Row: Education + Achievements ── */
+.profile-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+}
+
+.profile-education-card,
+.profile-achievements-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    padding: 36px;
+}
+
+/* ── Achievements: No-Avatar header override ── */
+.ach-header-wrap {
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.ach-profile-header {
+    gap: 0 !important;
+}
+
+.ach-profile-header .gal-profile-details {
+    flex: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .profile-hero-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-hero-left {
+        width: 100%;
+    }
+
+    .profile-details-hobbies-row {
+        flex-direction: column;
+    }
+
+    .profile-bottom-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-hero-card {
+        padding: 24px;
+    }
+
+    .profile-education-card,
+    .profile-achievements-card {
+        padding: 24px;
+    }
+}
+
+/* ==========================================================================
+   🏆 ACHIEVEMENTS — INSTAGRAM TAB SYSTEM
+   ========================================================================== */
+
+/* Tab content panel */
+.ach-tab-content {
+    animation: fadeInTab 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+    margin-bottom: 60px;
+}
+
+.ach-fadeIn {
+    animation: fadeInTab 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered card entry for each tab */
+.ach-timeline-grid .timeline-card {
+    animation: achCardIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--ach-delay, 1) * 0.09s);
+}
+
+@keyframes achCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Override grid to use responsive auto-fit */
+.ach-timeline-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 28px;
+}
+
+/* Section header inside each tab */
+.ach-cards-header {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 2px dashed rgba(226, 232, 240, 0.9);
+}
+
+.ach-section-label {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.ach-section-sub {
+    color: var(--color-dark-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Summary badge at the bottom of each tab */
+.ach-tab-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: var(--border-radius-md);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    margin-top: 6px;
+}
+
+.college-summary {
+    background: #eff6ff;
+    color: #1e40af;
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+.shs-summary {
+    background: #e6fffa;
+    color: #0d9488;
+    border-color: rgba(16, 185, 129, 0.15);
+}
+
+.jhs-summary {
+    background: #fffbeb;
+    color: #b45309;
+    border-color: rgba(245, 158, 11, 0.15);
+}
+
+/* Emoji tab icon */
+.ach-tab-emoji {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* New tag colour for Basic Education */
+.tag-basic {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+/* No-avatar achievements header: fill width */
+.ach-profile-header {
+    gap: 0 !important;
+}
+
+.ach-profile-header .gal-profile-details {
+    flex: 1;
+}
+
+/* ==========================================================================
+   🖼️ PORTFOLIO HOVER OVERLAY — TEXT INFO LAYOUT
+   ========================================================================== */
+
+/* Replaces the old .gal-overlay-stats emoji badges with real text */
+.gal-overlay-text-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+    transform: translateY(15px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gal-post:hover .gal-overlay-text-info {
+    transform: translateY(0);
+}
+
+.overlay-cert-label {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.overlay-cert-date {
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    opacity: 0.9;
 }
