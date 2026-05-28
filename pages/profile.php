@@ -129,8 +129,10 @@ $has_avatar = file_exists($avatar_img);
                                     <span class="hobby-card-label">DIY Coffee</span>
                                 </div>
                                 <div class="hobby-card-item">
-                                    <span class="hobby-card-icon music">🎵</span>
+                                    <span class="hobby-card-icon music"><a href="https://open.spotify.com/track/1udOOSbJnytCdgvbgYOF5s?si=3c050a50656646cf">🎵</a>  </span>
                                     <span class="hobby-card-label">Listening to Music</span>
+
+                                    
                                 </div>
                             </div>
                         </div>
